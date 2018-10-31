@@ -1,14 +1,19 @@
 $(document).ready(function() {
+    var timeId = null
     // Header Scroll
     $(window).on('scroll', function() {
-        var scroll = $(window).scrollTop()
+        clearTimeout(timeId)
+        timeId = setTimeout(function() {
+            var scroll = $(window).scrollTop()
 
-        if (scroll >= 50) {
-            $('#header').addClass('fixed')
-        } else {
-            $('#header').removeClass('fixed')
-        }
+            if (scroll >= 50) {
+                $('#header').addClass('fixed')
+            } else {
+                $('#header').removeClass('fixed')
+            }
+        }, 200)
     })
+    $(window).trigger('scroll')
 
     // Owl Carousel
 
