@@ -11,7 +11,7 @@ $(document).ready(function() {
             } else {
                 $('#header').removeClass('fixed')
             }
-        }, 200)
+        }, 100)
     })
     $(window).trigger('scroll')
 
